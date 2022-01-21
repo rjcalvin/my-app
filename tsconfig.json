@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "outDir": "./dist/",
+        "noImplicitAny": false,
+        "target": "es2015",
+        "jsx": "react",
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "lib": [
+            "es2016",
+            "dom",
+            "esnext.asynciterable"
+        ],
+        "plugins": [
+            {
+                "transform": "typescript-plugin-styled-components",
+                "type": "config",
+                "minify": true,
+                "ssr": true
+            }
+        ],
+        "baseUrl": "./",
+        "paths": {
+            "@shared/*": [
+                "src/App/Shared/*"
+            ]
+        }
+    },
+    "typedocOptions": {
+        "mode": "modules",
+        "out": "docs"
+    }
+}
