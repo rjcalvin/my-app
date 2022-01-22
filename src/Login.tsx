@@ -29,7 +29,7 @@ setName(event.target.value)
         
         <h1>Login</h1>
         {/* <Link to="/dashboard">Dahboard</Link> */}
-        <input  name ='userName' type='text' placeholder="enter username" onChange={onChangeUser}/>
+        <input  name ='userName' type='text' placeholder="enter username" className="rounded text-pink-500" onChange={onChangeUser}/>
         <input type='password' name ='password' placeholder="enter password" onChange={onChangePassword}/>
         <button onClick={onSubmit}>submit</button>
 

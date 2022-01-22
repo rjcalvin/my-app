@@ -33,10 +33,11 @@ module.exports = merge(baseConfig, {
           loader: 'postcss-loader',
         },
         {
-          loader: 'less-loader', options: {
-            // strictMath: true,
-            // noIeCompat: true,
-            javascriptEnabled: true
+          loader: 'less-loader', 
+          options: {
+            lessOptions: {
+              javascriptEnabled: true
+            }
           }
         }]
       }

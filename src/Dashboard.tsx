@@ -1,19 +1,20 @@
 import React, {Component} from "react";
+import AppLayout from "./components/AppLayout";
 
 class dashboard extends Component{
    
 
     render(){
         return(
-            <div>
-                <form>
-  <label>
-    Name:
-    <input type="text" name="name" />
-  </label>
-  <input type="submit" value="Submit" />
-</form>
-</div>
+          <AppLayout>
+            <div>   
+            <label>
+              Name:
+              <input type="text" className="rounded text-pink-500" name="name" />
+            </label>
+            <input type="submit" value="Submit" />
+          </div>
+          </AppLayout>
         )
     }
 }
