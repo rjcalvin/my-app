@@ -3,6 +3,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 
 // 1. import default from the plugin module
 const createStyledComponentsTransformer = require('typescript-plugin-styled-components').default;
@@ -55,6 +56,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new NodePolyfillPlugin(),
     new HTMLWebpackPlugin({
       title: 'React TS',
       template: './src/index.html',
